@@ -1,0 +1,201 @@
+:root {
+  --primary: #ebe0f5;
+  --bg: #ffffff;
+  --primary-soft: #e6d8f5;
+  --primary-hover: #d4c0ee;
+
+  --accent: #ff9e0d;
+  --accent-hover: #e68900;
+  /* kontrol global */
+  --nav-height: 70px;
+  --container-width: 1100px;
+  --gap: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #a06ec4;
+}
+.container {
+  width: 100%;
+  max-width: var(--container-width); /* ⬅️ DI SINI NGATURNYA */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--nav-height);
+  padding: 0 15%;
+  background-color: rgb(160, 110, 196);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar-logo img {
+  height: 40px !important;
+  width: auto !important;
+  max-width: none;
+  display: block;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu-item {
+  padding: 8px 16px;
+  border-radius: 10px;
+  color: rgb(242, 241, 243);
+  text-decoration: none;
+  background: rgba(252, 252, 252, 0.15);
+}
+
+.menu-item.active,
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* OFFSET GLOBAL */
+main {
+  padding-top: var(--nav-height);
+}
+
+.hero {
+  padding: 2rem 0;
+}
+.hero-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-image img {
+  width: 400px;
+}
+
+/* BUTTON HERO (ORANGE) */
+.btn-custom {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+
+  background-color: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.btn-custom:hover {
+  background-color: var(--accent-hover);
+}
+
+/* ===================== */
+/* ACTION CARD (UNGU) */
+/* ===================== */
+.card-action {
+  display: flex;
+  flex-direction: column; /* ⬅️ vertikal */
+  align-items: center; /* ⬅️ center horizontal */
+  text-align: center;
+
+  padding: 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+
+  gap: 5px; /* jarak antar elemen */
+}
+
+.card-icon {
+  width: 120px;
+  height: auto;
+}
+
+/* warna utama */
+.card-purple {
+  background: var(--primary-soft);
+  color: #a06ec4;
+  border: 1px solid #d9c6ec;
+}
+
+/* hover tetap ungu */
+.card-purple:hover {
+  background: var(--primary-hover);
+  transform: translateY(-5px);
+}
+
+/* versi lebih terang (informasi) */
+.card-light {
+  background: #efe7fa;
+  color: #a06ec4;
+  border: 1px solid #e3d3f5;
+}
+
+.card-light:hover {
+  background: #e0d1f5;
+  transform: translateY(-5px);
+}
+/* SECTION */
+/* ===================== */
+section {
+  padding: 1.5rem 0;
+}
+
+/* ===================== */
+/* FOOTER */
+/* ===================== */
+.footer {
+  margin-top: 3rem;
+  padding: 1rem;
+  text-align: center;
+  background: #f5f0fa;
+}
+
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+@media (max-width: 768px) {
+  .hero-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image img {
+    width: 250px;
+  }
+
+  .navbar .container {
+    flex-direction: column; /* ⬅️ ubah jadi vertikal */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
