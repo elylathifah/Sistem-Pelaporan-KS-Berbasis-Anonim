@@ -1,0 +1,105 @@
+/* Container Utama */
+.container-hak {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header-hak {
+  margin-bottom: 50px;
+}
+
+.logo-satgas {
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.main-title {
+  text-align: center;
+  color: #a06ec4;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Grid Layout */
+.hak-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Membagi 2 kolom */
+  gap: 25px;
+}
+
+/* Card Styling */
+.hak-card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 30px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.hak-card.purple-bg {
+  background-color: #f6f1fc; /* Ungu muda sesuai gambar */
+}
+
+.hak-card.white-bg {
+  background-color: #ffffff;
+  border: 1px solid #f0e6f7;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+/* Ikon */
+.hak-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Konten Teks */
+.hak-content h3 {
+  color: #a06ec4;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.hak-content p {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.hak-content ul {
+  padding-left: 18px;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Kartu Paling Bawah (Full Width) */
+.full-width {
+  text-align: center;
+  grid-column: span 2; /* Mengambil 2 kolom sekaligus */
+  flex-direction: column; /* Ikon di atas teks */
+  padding: 40px;
+}
+
+.full-width .hak-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .hak-grid {
+    grid-template-columns: 1fr;
+  }
+  .full-width {
+    grid-column: span 1;
+  }
+  .hak-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
